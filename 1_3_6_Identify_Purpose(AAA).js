@@ -1,6 +1,6 @@
 setTimeout(() => {
     IdentifyPurpose()
-}, 600);
+}, 4000);
 
 function IdentifyPurpose() {
     $.fn.log = function () {

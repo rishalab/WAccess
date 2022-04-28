@@ -5,7 +5,7 @@
 
 setTimeout(() => {
   PointerTargetSpacing()
-}, 11400);
+}, 17000);
 
 function PointerTargetSpacing() {
   var allTags = document.querySelectorAll("*")

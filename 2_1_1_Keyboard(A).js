@@ -1,6 +1,6 @@
 setTimeout(() => {
     Keyboard()
-}, 600);
+}, 10000);
 
 function Keyboard() {
     $.fn.log = function () {

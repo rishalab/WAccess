@@ -1,7 +1,7 @@
 setTimeout(() => {
     HeadingsAndLabels()
-}, 1800);
-// Headings must follow a sequential order to avoid confusion.
+}, 13000);
+
 function HeadingsAndLabels() {
     $.fn.log = function () {
         console.log.apply(console, this);

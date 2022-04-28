@@ -1,6 +1,6 @@
 setTimeout(() => {
     Contrast_Enhanced__1_4_6()
-}, 1800);
+}, 9000);
 
 function Contrast_Enhanced__1_4_6() {
     $.fn.log = function () {

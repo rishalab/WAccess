@@ -1,7 +1,7 @@
 
 setTimeout(() => {
     FocusAppearanceEnhanced()
-}, 600);
+}, 15000);
 
 function FocusAppearanceEnhanced() {
     $.fn.log = function () {

@@ -1,6 +1,6 @@
 setTimeout(() => {
     ResizeText()
-}, 1080);
+}, 8000);
 
 function ResizeText() {
     $.fn.log = function () {

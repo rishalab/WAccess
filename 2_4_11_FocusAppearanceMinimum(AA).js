@@ -15,9 +15,6 @@ function FocusAppearanceMinimum() {
                 $(this).prop("tagName") != "TITLE" &&
                 $(this).prop("tagName") != "NOSCRIPT" &&
                 $(this).prop("tagName") != "META") {
-                var violationMap = {
-                    "Contrasting_Area": false,
-                }
                 var continueLoop = false
                 if ($(this).prop("tagName") == "BUTTON" || $(this).prop("tagName") == "INPUT") {
                     if ($(this).prop("disabled")) {
@@ -28,8 +25,8 @@ function FocusAppearanceMinimum() {
                     // Checking the background contrast
                     var backgroundOnFocus = $(this).focus().css("background-color")
                     var background = $(this).css("background-color")
-                    bgArr = returnColorArr(background)
-                    bgArrOnFocus = returnColorArr(backgroundOnFocus)
+                    var bgArr = returnColorArr(background)
+                    var bgArrOnFocus = returnColorArr(backgroundOnFocus)
                     var contrastGainedBg = contrast(bgArrOnFocus, bgArr)
                     if (contrastGainedBg < 3) {
                         console.log("%cRule:%cWCAG 2.4.11 (2.2,AA)",
@@ -99,7 +96,6 @@ function FocusAppearanceMinimum() {
                     // Checking if outline on focus has 2px thickness, solid color, color contrasting with the background with a ratio more than 3
                     var thicknesspx = $(this).focus().css("outline-width")
                     if (thicknesspx == null || thicknesspx == "" || thicknesspx == undefined) {
-                        violationMap["Contrasting_Area"] = true
                         console.log("%cRule:%cWCAG 2.4.11 (2.2,AA)",
                         `color: #FFF;
                             background-color: #333;
@@ -178,7 +174,6 @@ function FocusAppearanceMinimum() {
                                 console.log(focusArr, nonfocusArr)
                                 var contrastGained = contrast(focusArr, nonfocusArr)
                                 if (contrastGained < 3) {
-                                    violationMap["Contrasting_Area"] = true
                                     console.log("%cRule:%cWCAG 2.4.11 (2.2,AA)",
                                     `color: #FFF;
                                         background-color: #333;
@@ -244,7 +239,6 @@ function FocusAppearanceMinimum() {
                                 }
                             }
                             else {
-                                violationMap["Contrasting_Area"] = true
                                 console.log("%cRule:%cWCAG 2.4.11 (2.2,AA)",
                                 `color: #FFF;
                                     background-color: #333;
@@ -309,7 +303,6 @@ function FocusAppearanceMinimum() {
                                     display: inline;`)
                             }
                         } else {
-                            violationMap["Contrasting_Area"] = true
                             console.log("%cRule:%cWCAG 2.4.11 (2.2,AA)",
                             `color: #FFF;
                                 background-color: #333;
@@ -488,4 +481,4 @@ function returnColorArr(color) {
 }
 setTimeout(() => {
     FocusAppearanceMinimum()
-}, 2000);
+}, 14000);

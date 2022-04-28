@@ -1,6 +1,6 @@
 setTimeout(() => {
     AccessibleAuthentication()
-}, 600);
+}, 21000);
 function AutoComplete(elementArray) {
     for (var i = 0; i < elementArray.length; i++) {
         if (elementArray[i].type == "submit" || elementArray[i].type == "hidden") {
@@ -23,7 +23,7 @@ function AccessibleAuthentication() {
         if(!inputTags[a].disabled){
             if (inputTags[a].type == "submit") {
                 if (inputTags[a].form == null) {
-                    if (element.oncontextmenu == null || element.onfocus == null) {
+                    if (element.oncontextmenu == null && element.onfocus == null) {
                         console.log("%cRule:%cWCAG 3.3.7 (2.2,A)",
                             `color: #FFF;
                                 background-color: #333;

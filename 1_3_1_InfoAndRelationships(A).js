@@ -1,6 +1,6 @@
 setTimeout(() => {
     InfoAndRelationships()
-}, 600);
+}, 2000);
 
 function InfoAndRelationships() {
     $.fn.log = function () {

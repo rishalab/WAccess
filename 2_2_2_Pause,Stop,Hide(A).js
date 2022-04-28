@@ -1,6 +1,6 @@
 setTimeout(() => {
     Pause_Stop_Hide()
-}, 1020);
+}, 11000);
 
 function Pause_Stop_Hide() {
     $.fn.log = function () {

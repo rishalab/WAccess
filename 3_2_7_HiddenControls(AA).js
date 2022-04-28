@@ -2,7 +2,7 @@
 
 setTimeout(() => {
     HiddenControls()
-}, 400);
+}, 19000);
 
 function HiddenControls() {
     $.fn.log = function () {

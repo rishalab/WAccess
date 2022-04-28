@@ -1,6 +1,6 @@
 setTimeout(() => {
     LanguageOfPage();
-}, 800);
+}, 18000);
 
 
 function LanguageOfPage() {
@@ -1342,7 +1342,7 @@ function LanguageOfPage() {
                         if (keys.length == 2) {
                             var mixedLangTag = keys + "-" + codes
                             console.log(mixedLangTag)
-                            if (mixedLangTag == document.getElementsByTagName("html")[0].getAttribute("xml:lang")) {
+                            if (mixedLangTag == document.getElementsByTagName("html")[0].getAttribute("lang")) {
                                 checkmix = true
                                 break
                             }
@@ -1635,7 +1635,7 @@ function LanguageOfPage() {
                         if (keys.length == 2) {
                             var mixedLangTag = keys + "-" + codes
                             console.log(mixedLangTag)
-                            if (mixedLangTag == document.getElementsByTagName("html")[0].getAttribute("xml:lang")) {
+                            if (mixedLangTag == document.getElementsByTagName("html")[0].getAttribute("lang")) {
                                 checkmix = true
                                 break
                             }

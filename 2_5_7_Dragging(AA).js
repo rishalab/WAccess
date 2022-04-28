@@ -1,6 +1,6 @@
 setTimeout(() => {
     Dragging()
-}, 200);
+}, 16000);
 
 function Dragging() {
     $.fn.log = function () {
@@ -84,22 +84,21 @@ function Dragging() {
     //                 display: inline;`)
 
     //         }
-           
-            
+
+
     //     })
     // })
     for (var d = 0; d < allTags.length; d++) {
         var element = allTags[d]
         if (allTags[d].nodeName != "HTML" &&
-            allTags[d].nodeName != "BODY" &&
-            allTags[d].nodeName != "LINK" &&
+            allTags[d].nodeName != "BASE" &&
+            allTags[d].nodeName != "TITLE" &&
             allTags[d].nodeName != "SCRIPT" &&
             allTags[d].nodeName != "STYLE" &&
-            allTags[d].nodeName != "XML" &&
             allTags[d].nodeName != "HEAD" &&
             allTags[d].nodeName != "META") {
             if (element.draggable == true) {
-                if (element.oncontextmenu == null || element.onfocus == null) {
+                if (element.oncontextmenu == null && element.onfocus == null) {
                     console.log("%cRule:%cWCAG 2.5.7 (2.2,AA)",
                         `color: #FFF;
                             background-color: #333;
@@ -164,7 +163,7 @@ function Dragging() {
                             display: inline;`)
 
                 }
-            } 
+            }
             // else {
             //     if (element.ondrag != null || element.onpointercancel != null || element.onpointerdown != null ||
             //         element.ondragend != null || element.onpointerenter != null || element.onpointerleave != null ||

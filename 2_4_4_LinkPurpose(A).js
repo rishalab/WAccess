@@ -1,6 +1,6 @@
 setTimeout(() => {
     LinkPurpose()
-}, 800);
+}, 12000);
 
 function LinkPurpose() {
     $.fn.log = function () {

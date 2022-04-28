@@ -1,6 +1,6 @@
 setTimeout(() => {
     Contrast_Minimum__1_4_3()
-}, 1800);
+}, 7000);
 
 function Contrast_Minimum__1_4_3() {
     $.fn.log = function () {

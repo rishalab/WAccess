@@ -1,6 +1,6 @@
 setTimeout(() => {
     UseOfColor()
-}, 1200);
+}, 6000);
 
 function UseOfColor() {
     // var checkIf = false

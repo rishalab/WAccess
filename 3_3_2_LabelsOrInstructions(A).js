@@ -1,6 +1,6 @@
 setTimeout(() => {
     LabelsOrInstructions()
-}, 700);
+}, 20000);
 
 function LabelsOrInstructions() {
     $.fn.log = function () {

@@ -1,6 +1,6 @@
 setTimeout(() => {
-    Parsing()
-}, 1600);
+    Parsing()   
+}, 22000);
 
 function Parsing() {
     $.fn.log = function () {
@@ -63,29 +63,28 @@ function Parsing() {
                 display: inline;`)
     }
     var allTags = document.querySelectorAll('*')
-    var id_array = {}
+    var id_map = {}
     for (var d = 0; d < allTags.length; d++) {
         if (allTags[d].nodeName != "HTML" &&
-            allTags[d].nodeName != "BODY" &&
-            allTags[d].nodeName != "LINK" &&
+            allTags[d].nodeName != "BASE" &&
+            allTags[d].nodeName != "TITLE" &&
             allTags[d].nodeName != "SCRIPT" &&
-            allTags[d].nodeName != "STYLE" &&
-            allTags[d].nodeName != "XML" &&
+            allTags[d].nodeName != "STYLE"  &&
             allTags[d].nodeName != "HEAD" &&
             allTags[d].nodeName != "META") {
             if (allTags[d].id != null && allTags[d].id != "") {
-                if (allTags[d].id in id_array) {
-                    id_array[allTags[d].id].push(d)
+                if (allTags[d].id in id_map) {
+                    id_map[allTags[d].id].push(d)
                 } else {
                     var new_arr = []
                     new_arr.push(d)
-                    id_array[allTags[d].id] = new_arr
+                    id_map[allTags[d].id] = new_arr
                 }
             }
         }
     }
-    for (id in id_array) {
-        if (id_array[id].length > 1) {
+    for (id in id_map) {
+        if (id_map[id].length > 1) {
             console.log("%cRule:%cWCAG 4.1.1 (2.0,A)",
                 `color: #FFF;
                         background-color: #333;
@@ -124,8 +123,8 @@ function Parsing() {
                         font-size: 0.8rem;
                         display: inline;
                         box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);`)
-            for (var i = 0; i < id_array[id].length; i++) {
-                $(allTags[id_array[id][i]]).log()
+            for (var i = 0; i < id_map[id].length; i++) {
+                $(allTags[id_map[id][i]]).log()
             }
             console.log("%cFix:%cUse a distinct id value",
                 `color: #FFF;
