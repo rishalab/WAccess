@@ -360,7 +360,7 @@ function NonTextContent_1_1_1() {
             for (let iter = 0; iter < imgParentTags.length; iter++) {
                 var useMapName = "#" + areaTags[index].parentNode.name
                 if (useMapName == imgParentTags[iter].useMap) {
-                    if (areaTags[index].alt == null || areaTags.alt == "") {
+                    if (areaTags[index].alt == null || areaTags[index].alt == "") {
                         console.log("%cRule:%cWCAG 1.1.1 (2.0,A)",
                             `color: #FFF;
                             background-color: #333;
